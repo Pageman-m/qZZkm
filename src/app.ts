@@ -1,4 +1,6 @@
-import {express} from 'express'
+import express from 'express'
+
+const app = express()
 
 function sayHello(name: string) {
     return 'Hello' + name
