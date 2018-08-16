@@ -1,11 +1,13 @@
-import express from 'express'
+import express from 'express';
+import { MongoClient } from 'mongodb';
+import { mongoServerUrl } from '../config/server'
+const app = express();
 
-const app = express()
+(async ()=> {
+    let client = null;
+    let db = null;
 
-function sayHello(name: string) {
-    return 'Hello' + name
-}
+    client = await 
 
-let myName = 'Weigo'
 
-console.log(sayHello(myName))
+})();

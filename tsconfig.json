@@ -1,15 +1,21 @@
 {
     "compilerOptions": {
+        "module": "commonjs",
+        "esModuleInterop": true,
         "target": "es6",
-        "noImplicitAny": false,
+        "noImplicitAny": true,
+        "moduleResolution": "node",
         "sourceMap": true,
-        "jsx": "preserve",
-        "experimentalDecorators": true,
-        "moduleResolution": "node"
+        "outDir": "dist",
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "node_modules/*",
+                "src/types/*"
+            ]
+        }
     },
-    "lib": ["DOM", "es6"],
-    "exclude": [
-        "node_modules",
-        ".meteor"
+    "include": [
+        "src/**/*", "config/server.ts"
     ]
 }
